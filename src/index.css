@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --jp-paper: #fffdfa;
+  --jp-porcelain: #f7f2ee;
+  --jp-ink: #30242a;
+  --jp-muted: #6b5a62;
+  --jp-berry: #a63f63;
+  --jp-berry-deep: #81314f;
+  --jp-rose: #eab6c5;
+  --jp-champagne: #d6c3a5;
+}
+
+html {
+  min-height: 100%;
+  scroll-padding-top: 5rem;
+  scrollbar-gutter: stable;
+  overflow-x: clip;
+  background: var(--jp-paper);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--jp-paper);
+  color: var(--jp-ink);
+  font-family: Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.jp-social-wall-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  color: #fff;
+  background: var(--jp-berry);
+}
+
+:focus-visible {
+  outline: 2px solid var(--jp-berry);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .mobile-btn {
+    padding-inline: 1rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

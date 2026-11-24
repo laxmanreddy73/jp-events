@@ -1,0 +1,14 @@
+export function initializeGA4(): void;
+export function trackPageView(path: string, title?: string, additionalParams?: Record<string, unknown>): void;
+export function trackWebVital(metric: unknown): void;
+export function trackScrollDepth(depth: number, timeSpent?: number): void;
+export function trackCTAClick(ctaName: string, ctaLocation: string, additionalParams?: Record<string, unknown>): void;
+export function trackFormSubmission(formName: string, formType: string, formData?: Record<string, unknown>): void;
+export function trackExternalLink(url: string, text: string, linkType?: string): void;
+export function extractUTMParams(): Record<string, string>;
+export function trackCustomEvent(eventName: string, eventData?: Record<string, unknown>): void;
+export function initializeAllTracking(): void;
+export const trackWebVitals: unknown;
+export const trackEngagement: unknown;
+export const trackFormInteractions: unknown;
+export const interiorDesignTracking: Record<string, (...args: unknown[]) => unknown>;

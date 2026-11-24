@@ -1,0 +1,25 @@
+project_id = "jp-events-cms"
+
+[auth]
+enable_signup = false
+enable_anonymous_sign_ins = false
+
+[auth.mfa.totp]
+enroll_enabled = true
+verify_enabled = true
+max_enrolled_factors = 5
+
+[functions.finalize-upload]
+verify_jwt = true
+
+[functions.publish-content]
+verify_jwt = true
+
+[functions.request-media-deletion]
+verify_jwt = true
+
+[functions.cleanup-orphan-media]
+verify_jwt = true
+
+[functions.replace-site-image]
+verify_jwt = true

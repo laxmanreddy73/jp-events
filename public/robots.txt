@@ -1,0 +1,33 @@
+# Robots.txt for Suba Designs & Decorations
+
+# Allow all robots to index the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Facebook external hit
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter bot
+User-agent: Twitterbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://subadesignsanddecoration.com/sitemap.xml
+Sitemap: https://subadesignsanddecoration.com/sitemap-mobile.xml
